@@ -1,17 +1,16 @@
 function findWaldo(arr, found) {
   arr.forEach(function(element){
     if (element === "Waldo") {
-      found()
+      found(element,arr)
     }
   })
-  console.log("hah");
-
 }
-
-
-
-function actionWhenFound() {
-  console.log("Found him!");
+function actionWhenFound(name,arr) {
+  for (var i = 0; i < arr.length; i++){
+    if (arr[i] === name) {
+      console.log("Found " + name + " at index " + i + "!" );
+    }
+  }
 }
 
 findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
