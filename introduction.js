@@ -4,7 +4,7 @@ function findWaldo(arr, found) {
       found()
     }
   })
-
+  console.log("hah");
 
 }
 
